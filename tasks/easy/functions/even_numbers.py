@@ -7,3 +7,11 @@
 - get_even_number(10) -> 20
 - get_even_number(3) -> 6
 """
+from typing import Optional
+
+
+def get_even_number(num: Optional[int]) -> int:
+    return num * 2
+
+
+get_even_number_2 = lambda num: num * 2
