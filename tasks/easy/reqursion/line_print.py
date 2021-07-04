@@ -20,3 +20,11 @@ line_print(some_list)
     3
 8
 """
+
+
+def line_print(new_list: list, iteration: int = 0) -> str:
+    for i in range(len(new_list)):
+        if type(new_list[i]) == list:
+            line_print(new_list[i], iteration=iteration + 1)
+        else:
+            print(f"{'    ' * iteration}{new_list[i]}")

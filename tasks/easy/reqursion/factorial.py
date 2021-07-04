@@ -3,7 +3,7 @@
 """
 
 
-def factorial(n: int, current=1, result: int = 1):
+def factorial(n: int, current: int = 1, result: int = 1):
     if current <= n:
         factorial(n, current + 1, result * current)
     else:
