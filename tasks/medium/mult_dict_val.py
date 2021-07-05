@@ -6,6 +6,7 @@
 """
 from typing import Optional
 
+
 SOME_DICT = {str(val): val for val in range(1, 50, 3)}
 
 
@@ -14,5 +15,3 @@ def multiply_dict_values(some_dict: Optional[dict], result: int = 1) -> int:
         result *= int(key)
     return result
 
-
-multiply_dict_values(SOME_DICT)
