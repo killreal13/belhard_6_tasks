@@ -8,9 +8,8 @@
 from typing import Optional
 
 
-def reverse_dict(dict_1: Optional[dict]) -> dict:
-    print(dict_1.fromkeys(dict_1.values(), dict_1.keys()))
-    return dict_1.fromkeys(dict_1.values(), dict_1.keys())
-
-
-reverse_dict({1: "kek", 2: "rofl"})
+def reverse_dict(dict_1: Optional[dict], dict_2={}) -> dict:
+    key, value = list(dict_1.keys()), list(dict_1.values())
+    for i in range(len(key)):
+        dict_2.update({value[i]: key[i]})
+    return dict_2
