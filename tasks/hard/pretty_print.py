@@ -17,7 +17,16 @@ data = {'a': 123, 123: [1, 2, 3], 'asd': {'c': 654.54}}
 """
 
 
-def pretty_print(dict_1: dict) -> dict:
-    pass
+def pretty_print(dict_1: dict, id_1=0, value=[], keys=[], id_2=0) -> dict:
+    if 6 > id_2:
+        keys = list(dict_1.keys())[id_1]
+        value = list(dict_1.values())[id_1]
+        if type(value) == dict:
+            print(f"{'    '}{keys}")
+            pretty_print(dict_1=value, id_1=0, id_2=id_2+1)
+        else:
+            print(f"{'    '}{keys}: {value},")
+            pretty_print(dict_1, id_1=id_1 + 1, id_2=id_2+1)
 
 
+pretty_print({'a': 123, 123: [1, 2, 3], 'asd': {'c': 654.54}})
