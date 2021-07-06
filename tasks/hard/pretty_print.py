@@ -15,3 +15,10 @@ data = {'a': 123, 123: [1, 2, 3], 'asd': {'c': 654.54}}
     },
 }
 """
+
+
+def pretty_print(dict_1: dict) -> dict:
+    print(dict_1.items())
+
+
+pretty_print({'a': 123, 123: [1, 2, 3], 'asd': {'c': 654.54}})
