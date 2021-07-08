@@ -13,6 +13,7 @@ from typing import Optional
 def log_decorator(func):
     def wrapper(*args, **kwargs):
         print(f"Выполняем {func.__name__} с args: {args} и kwargs: {kwargs}")
+        func(*args, **kwargs)
         print(f"Выполнено {func.__name__}")
     return wrapper
 

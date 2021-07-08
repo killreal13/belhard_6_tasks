@@ -25,18 +25,22 @@ school_data = {
 }
 
 
-def incr_students(SCHOOL_DATA: Optional[dict], class_name: Optional[str]) -> dict:
-    return SCHOOL_DATA.update({class_name: SCHOOL_DATA.get(class_name) + 1})
+def incr_students(school_data_1: Optional[dict], class_name: Optional[str]) -> dict:
+    return school_data_1.update({class_name: school_data_1.get(class_name) + 1})
 
-def dect_students(SCHOOL_DATA: Optional[dict], class_name: Optional[str]) -> dict:
-    return SCHOOL_DATA.update({class_name: SCHOOL_DATA.get(class_name) - 1})
 
-def add_class(SCHOOL_DATA: Optional[dict], class_name: Optional[str]) -> dict:
-    return SCHOOL_DATA.update({class_name: 0})
+def dect_students(school_data_1: Optional[dict], class_name: Optional[str]) -> dict:
+    return school_data_1.update({class_name: school_data_1.get(class_name) - 1})
 
-def remove_class(SCHOOL_DATA: Optional[dict], class_name: Optional[str]) -> dict:
-    SCHOOL_DATA.pop(class_name)
-    return SCHOOL_DATA
 
-def calc_students(SCHOOL_DATA: Optional[dict]) -> int:
-    return sum(SCHOOL_DATA.values())
+def add_class(school_data_1: Optional[dict], class_name: Optional[str]) -> dict:
+    return school_data_1.update({class_name: 0})
+
+
+def remove_class(school_data_1: Optional[dict], class_name: Optional[str]) -> dict:
+    school_data_1.pop(class_name)
+    return school_data_1
+
+
+def calc_students(school_data_1: Optional[dict]) -> int:
+    return sum(school_data_1.values())
